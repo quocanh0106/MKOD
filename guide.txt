@@ -1,0 +1,46 @@
+/*------------- variables icon
+
+<i class="lab la-facebook-f"></i>
+<i class="lab la-facebook-square"></i>
+<i class="lab la-twitter"></i>
+<i class="lab la-pinterest"></i>
+<i class="lab la-instagram"></i>
+<i class="las la-search"></i>
+<i class="las la-angle-up"></i>
+<i class="las la-angle-down"></i>
+<i class="las la-angle-left"></i>
+<i class="las la-angle-right"></i>
+<i class="las la-user"></i>
+<i class="las la-phone"></i>
+<i class="las la-shopping-bag"></i>
+<i class="las la-copyright"></i>
+
+*/
+
+<h3>Font-size mặc định : OpenSan <br>background-color : #fff()</h3>
+<h1><span style="text-decoration: underline;">ICONS</span></h1>
+<div class="icon-style-guide">
+<p>{{customVar code=facebook_icon}}</p>
+<p>{{customVar code=twitter_icon}}</p>
+<p>{{customVar code=pinterest_icon}}</p>
+<p>{{customVar code=instagram_icon}}</p>
+<p>{{customVar code=search_icon}}</p>
+<p>{{customVar code=up_icon}}</p>
+<p>{{customVar code=down_icon}}</p>
+<p>{{customVar code=left_icon}}</p>
+<p>{{customVar code=right_icon}}</p>
+<p>{{customVar code=user_icon}}</p>
+<p>{{customVar code=phone_icon}}</p>
+<p>{{customVar code=bag_icon}}</p>
+<p>{{customVar code=facebook_square_icon}}</p>
+<p>{{customVar code=copyright_icon}}</p>
+</div>
+<p>&nbsp;</p>
+<div>
+<h1><span style="text-decoration: underline;">BUTTONS</span></h1>
+<h4>để thay đổi size button thêm thuộc tính padding là xong</h4>
+</div>
+<p><button class="cart-button" type="button">add to bag</button></p>
+<p><button class="sign-up-button" type="button">sign up</button></p>
+<p><button class="shop-now-button" type="button">shop now</button></p>
+
