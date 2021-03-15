@@ -1,0 +1,81 @@
+
+& when (@media-common = true) {
+
+    /* ---------- Header ------------*/
+    .page-header {
+        .panel.wrapper {
+            display: none;
+        }
+        .header.content {
+            .logo {
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, 0%);
+            }
+            .header.links {
+                position: relative;
+                float: right;
+            }
+            .contact,
+            .authorization-link {
+                display: none;
+            }
+        }
+    }
+    /* ---------- End Header ------------*/
+    
+}
+
+/*--------------------Reponsive ------------*/
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    /* ---------- Header ------------*/
+    .page-header {
+        .panel.wrapper {
+            display: block;
+            background-color: #fff;
+            .header.panel {
+                > .header.links {
+                    display: none;
+                }
+                .sale-item {
+                    float: left;
+                    width: 33%;
+                    text-align: center;
+    
+                    font-size: 16px;
+                    color: #242424;
+                    font-family: @font-family__fugue;
+                    text-transform: uppercase;
+                    p{
+                        margin: 0;
+                    }
+                }
+            }
+        }
+        .header.content {
+            .block-search {
+                float: left;
+                transform: translate(-150%, 0);
+            }
+            .contact,
+            .authorization-link {
+                display: block;
+                position: relative;
+                float: right;
+                list-style: none;
+                a{
+                    color: black;
+                    font-size: 14px;
+                    letter-spacing: 1px;
+                    color: #0e0e0e;
+                    font-family: @font-family__fugue;
+                }
+            }
+            .contact {
+                padding-right: 20px;
+            }
+        }
+    }
+    /* ---------- End Header ------------*/
+}
