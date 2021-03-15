@@ -5,8 +5,9 @@
  * See COPYING.txt for license details.
  */
 -->
-<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="2columns-left" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="3columns" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
+        <referenceBlock name="catalog.compare.sidebar" remove="true"/>
         <referenceContainer name="columns.top">
             <container name="category.view.container" htmlTag="div" htmlClass="category-view" after="-">
                 <block class="Magento\Catalog\Block\Category\View" name="category.image" template="Magento_Catalog::category/image.phtml"/>
@@ -47,6 +48,7 @@
                 <argument name="id" xsi:type="string">page-title-heading</argument>
                 <argument name="add_base_attribute_aria" xsi:type="string">page-title-heading toolbar-amount</argument>
             </arguments>
+            <block class="" name="category-infor" after="page-title-heading" template="Magento_Catalog::banner.phtml"/>
             <block class="Magento\Catalog\Block\Category\Rss\Link" name="rss.link" template="Magento_Catalog::category/rss.phtml"/>
         </referenceBlock>
     </body>
