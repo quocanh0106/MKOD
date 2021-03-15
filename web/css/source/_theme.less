@@ -306,3 +306,45 @@
 
 @font-family-name__fugue: 'Fugue';
 @font-family__fugue: @font-family-name__fugue, @font-family__sans-serif;
+
+/* ------------------- mixin --------------------- */
+
+/*--- font-awesome ---*/
+
+// @la-facebook: "\f39e";
+// @la-facebook-square: "\f082";
+// @la-twitter: "\f099";
+// @la-pinterest: "\f0d2";
+// @la-instagram: "\f16d";
+@la-search: "\f002";
+@la-angle-up: "\f106";
+@la-angle-down: "\f107";
+@la-angle-left: "\f104";
+@la-angle-right: "\f105";
+@la-user: "\f007";
+@la-phone: "\f095";
+@la-shopping-bag: "\f290";
+@la-copyright: "\f1f9";
+
+.line-awesome(@name-font-awesome) {
+    font-weight: 900;
+    font-family: 'Line Awesome Free';
+    content: @name-font-awesome;
+}
+
+/* ------------------- clearfix --------------------- */
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.clearfix {
+    overflow: hidden;
+}
+
+.none {
+    margin: 0;
+    padding: 0;
+}
