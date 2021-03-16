@@ -11,5 +11,13 @@
         <referenceBlock name="breadcrumbs" remove="true" />
 
         <move element="authorization-link-login" destination="header-wrapper" after="minicart"/>
+
+
+        <referenceContainer name="footer-container">
+            <container name="footer" as="footer" label="Page Footer" htmlTag="div" htmlClass="footer content">
+                <block class="Magento\Framework\View\Element\Template" name="newsletter" template="Magento_Newsletter::subscribe.phtml"/>
+                <block class="Magento\Framework\View\Element\Template" name="footer_custom" template="Magento_Theme::html/footer.phtml"/>
+            </container>
+        </referenceContainer>
     </body>
 </page>
