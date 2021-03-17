@@ -24,11 +24,8 @@
                 <div class="field newsletter">
                     <div class="control">
                         <label for="newsletter">
-                            <span class="label">
-                                <?= $block->escapeHtml(__('Sign Up for Our Newsletter:')) ?>
-                            </span>
                             <input name="email" type="email" id="newsletter"
-                                placeholder="<?= $block->escapeHtmlAttr(__('Enter your email address')) ?>"
+                                placeholder="<?= $block->escapeHtmlAttr(__('SIGN UP TO OUR NEWSLETTER')) ?>"
                                 data-mage-init='{"mage/trim-input":{}}'
                                 data-validate="{required:true, 'validate-email':true}"
                             />
@@ -36,7 +33,7 @@
                     </div>
                 </div>
                 <div class="actions">
-                    <button class="action subscribe primary"
+                    <button class="action subscribe sign-up-button"
                             title="<?= $block->escapeHtmlAttr(__('Subscribe')) ?>"
                             type="submit"
                             aria-label="Subscribe">
