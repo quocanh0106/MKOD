@@ -9,7 +9,9 @@
     <update handle="default_head_blocks"/>
     <body>
         <referenceBlock name="breadcrumbs" remove="true" />
-
+        <referenceContainer name="columns.top">
+            <referenceBlock name="page.main.title" display="false"/>
+        </referenceContainer>
         <move element="authorization-link-login" destination="header-wrapper" after="minicart"/>
 
 
