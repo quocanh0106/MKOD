@@ -1,23 +1,43 @@
 & when (@media-common = true){
     .page-title-wrapper{
+        .lib-css(text-align, center);
+        .lib-css(background-color, #fadcdc);
+        .lib-css(padding, 33px 0 18px 2px);
         h1{
+            .lib-css(margin, 0 0 13px 0);
             span{
                 .lib-css(font-family, @font-family__fugue);
                 .lib-css(color, @color-61);
                 .lib-css(font-size, 24px);
                 .lib-css(line-height, 14px);
                 .lib-css(text-transform, uppercase);
-                .lib-css();
-
+                .lib-css(letter-spacing, 0.7px);
             }
         }
         .list-banner{
-            width: 1315px;
+            .content-layout;
+            .lib-css(max-width, 1360px);
             .lib-css(font-family, @font-family__fugue);
             .lib-css(font-size, 18px);
             .lib-css(color, @color-cate-desc);
             .lib-css(line-height, 22px);
+            p{
+                .lib-css(margin, 0 -8px 0 0);
+            }
 
         }
+    }
+}
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .columns{
+        .content-layout;
+        .lib-css(max-width, 1318px);
+        li.item.product.product-item{
+            padding: 0;
+
+        }
+    }
+    .page-products .product-item-info {
+        width: 250px;
     }
 }
