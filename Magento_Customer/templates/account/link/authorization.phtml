@@ -14,10 +14,10 @@ if ($block->isLoggedIn()) {
 
 <li class="authorization-link">
     <a <?= /* @noEscape */ $block->getLinkAttributes() ?><?= /* @noEscape */ $dataPostParam ?>>
-        <?= $block->escapeHtml("account") ?>
+        <i class="las la-user"></i><?= $block->escapeHtml("account") ?>
     </a>
 </li>
 
 <li class="contact">
-    <a href="">contact</a>
+    <a href="#contact"><i class="las la-phone"></i>contact</a>
 </li>

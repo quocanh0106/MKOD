@@ -8,10 +8,11 @@
 <page layout="3columns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <update handle="default_head_blocks"/>
     <body>
+
+
         <referenceBlock name="breadcrumbs" remove="true" />
-        <referenceContainer name="columns.top">
-            <referenceBlock name="page.main.title" display="false"/>
-        </referenceContainer>
+        <!-- <referenceBlock name="header.container" remove="true" />
+        <referenceBlock name="main" remove="true" /> -->
         <move element="authorization-link-login" destination="header-wrapper" after="minicart"/>
 
 
@@ -21,5 +22,19 @@
                 <block class="Magento\Framework\View\Element\Template" name="footer_custom" template="Magento_Theme::html/footer.phtml"/>
             </container>
         </referenceContainer>
+
+        <!-- <referenceContainer name="main">
+            <container name="home_mkod" as="home_mkod" label="Home MKOD" htmlTag="div" htmlClass="home-mkod">
+                <block class="Magento\Framework\View\Element\Template" name="home-mkod" template="Magento_Theme::home_mkod.phtml"/>
+            </container>
+
+        </referenceContainer> -->
+
+        <!-- <container name="content.top" label="Main Content Top">
+                <block name="main_css_preloader" as="main_css_preloader" template="Magento_Theme::html/main_css_preloader.phtml" ifconfig="dev/css/use_css_critical_path"/>
+            </container>
+            <container name="content" label="Main Content Area"/>
+            <container name="content.aside" label="Main Content Aside"/>
+            <container name="content.bottom" label="Main Content Bottom"/> -->
     </body>
 </page>
