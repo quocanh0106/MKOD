@@ -1,3 +1,4 @@
+@navigation__background: #fff;
 
 & when (@media-common = true) {
 
@@ -24,10 +25,56 @@
     }
     /* ---------- End Header ------------*/
 
+    /* ---------- Footer ------------*/
+    .page-footer {
+        .footer.content {
+            .footer-container {
+                width: 100%;
+                .footer {
+                    .copy,
+                    .service,
+                    .feature {
+                        float: left;
+                        width: 100%;
+                        text-align: center;
+                        h5 {
+                            font-size: 16px;
+                            font-weight: 700;
+                            color: #090909;
+                            font-family: @font-family__fugue;
+                            text-transform: uppercase;
+                        }
+                    }
+                    .feature {
+                        &__col {
+                            &__left,
+                            &__right {
+                               float: left;
+                               width: 100%;
+                               text-align: center;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    /* ---------- End Footer ------------*/
+
+    /* ---------- Main ------------*/
+    .page-main {
+
+    }
+    /* ---------- End Main ------------*/
+
 }
 
-/*--------------------Reponsive ------------*/
+/*--------------------Reponsive screen max = 768px ------------*/
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
 
+}
+
+/*--------------------Reponsive screen min = 768px ------------*/
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
     /* ---------- Header ------------*/
     .page-header {
@@ -40,7 +87,7 @@
                 }
                 .sale-item {
                     float: left;
-                    width: 33%;
+                    width: 33.3%;
                     text-align: center;
 
                     font-size: 16px;
@@ -78,12 +125,81 @@
         }
     }
     /* ---------- End Header ------------*/
+
+    /* ---------- Main ------------*/
     .page-main{
-        max-width: 1920px;
-        margin: 0 auto;
-        width: 100%;
         box-sizing: border-box;
+        margin: 0 auto;
         padding: 0 20px;
+        max-width: 1920px;
+        width: 100%;
 
     }
+    /* ---------- End Main ------------*/
+
+
+    /* ---------- NAV ------------*/
+    .nav-sections-item-content {
+        > .navigation {
+            >ul {
+                display: flex;
+                justify-content: space-between;
+                >li {
+                    a span {
+                        text-transform: uppercase;
+                        font-size: 16px;
+                        letter-spacing: 1px;
+                        color: #000;
+                        font-weight: 700;
+                        font-family: @font-family__gt-fectra-fine;
+                    }
+                }
+            }
+        }
+    }
+    /* ---------- End NAV ------------*/
+
+     /* ---------- Footer ------------*/
+     .page-footer {
+        background-color: #fff;
+        .footer.content {
+            .footer-container {
+                width: 100%;
+                .footer {
+                    .copy,
+                    .service,
+                    .feature {
+                        width: 33.3%;
+                    }
+                    .feature {
+                        &__col {
+                            &__left,
+                            &__right {
+                               float: left;
+                               width: 50%;
+                            }
+                        }
+                    }
+                }
+            }
+            .block {
+                float: none;
+                .contact {
+                    width: 50%;
+                    float: left;
+                }
+                .newsletter-child {
+                    width: 50%;
+                    float: right;
+                }
+            }
+            .block.newsletter {
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+    }
+    /* ---------- End Footer ------------*/
+
+
 }
