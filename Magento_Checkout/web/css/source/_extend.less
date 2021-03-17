@@ -1,7 +1,10 @@
 
 & when (@media-common = true) {
-    .minicart-wrapper .action.showcart:before {
+    .minicart-wrapper .action.showcart:before,
+    .minicart-wrapper .action.showcart.active:before {
         .line-awesome(@la-shopping-bag);
+        color: #0e0e0e;
+        font-size: 27px;
     }
     
 }

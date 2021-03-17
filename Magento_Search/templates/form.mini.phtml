@@ -31,7 +31,7 @@ $helper = $this->helper(\Magento\Search\Helper\Data::class);
                            type="text"
                            name="<?= $block->escapeHtmlAttr($helper->getQueryParamName()) ?>"
                            value="<?= /* @noEscape */ $helper->getEscapedQueryText() ?>"
-                           placeholder="<?= $block->escapeHtmlAttr(__('Nhập từ khóa cần tìm ...')) ?>"
+                           placeholder="<?= $block->escapeHtmlAttr(__('search our store')) ?>"
                            class="input-text"
                            maxlength="<?= $block->escapeHtmlAttr($helper->getMaxQueryLength()) ?>"
                            role="combobox"
