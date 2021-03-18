@@ -6,11 +6,19 @@
         left: 0;
     }
     .toolbar.toolbar-products{
-        position: absolute;
-        top: 45px;
+        position: relative;
+        top: 0;
         right: 0;
         width: 100%;
-        max-width: 281px;
+        .modes{
+            position: absolute;
+            right: 0;
+        }
+        .toolbar-sorter .sorter{
+            position: absolute;
+            left: 0;
+
+        }
 
     }
 
@@ -19,20 +27,26 @@
 
 //desktop screen: 768 up to infinity
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
-    .filters-mobile{
+    .mobile{
         display: none;
     }
     .filter-options-item{
         width: 100%;
         margin: 0;
     }
+    .page-products .sorter{
+        position: absolute;
+        left: 0;
+        right: unset;
+    }
 }
 
 
-//desktop screen: 0 up to 767
+//mobile screen: 0 up to 767
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
-    .filters-desktop{
+    .desktop{
         display: none;
 
     }
+
 }

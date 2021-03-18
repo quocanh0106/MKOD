@@ -9,12 +9,13 @@
  * Category layered navigation
  *
  * @var $block \Magento\LayeredNavigation\Block\Navigation
+ * @var $sort \Magento\Catalog\Block\Product\ProductList\Toolbar
  */
 ?>
 
 <!--FILTERS DESKTOP-->
 
-<div class="filters-desktop">
+<div class="desktop">
     <?php if ($block->canShowBlock()) : ?>
         <div class="block filter" id="layered-filter-block" data-mage-init='
     {
@@ -61,7 +62,7 @@
                         }'>
                     <div data-role="collapsible" >
                         <div data-role="title">
-                            <button>filter</button>
+                            <span>filter</span>
                         </div>
                         <div data-role="content" id="narrow-by-list" data-mage-init='
                         {
@@ -103,7 +104,7 @@
 
 <!--FILTERS MOBILE-->
 
-<div class="filters-mobile">
+<div class="mobile">
     <?php if ($block->canShowBlock()) : ?>
         <div class="block filter" id="layered-filter-block" data-mage-init='
     {
