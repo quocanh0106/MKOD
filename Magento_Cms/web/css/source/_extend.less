@@ -13,17 +13,39 @@
                 left: 50%;
                 top: 50%;
                 text-align: center;
+                h3{
+                    text-transform: uppercase;
+                    font-size: 72px;
+                    color: #212121;
+                    font-weight: 300;
+                    font-family: @font-family-name__opensans;
+                    letter-spacing: 0;
+                }
+                .shop-now-button {
+                    padding: 10px 25px;
+                }
             }
         }
         .main-mkod {
-            .content-layout (1318px);
+            .content-layout (1390px);
+            h3 {
+                font-size: 36px;
+                color: #212121;
+                font-weight: 400;
+                font-family: @font-family-name__opensans;
+                text-transform: uppercase;
+                text-align: center;
+
+                padding: 25px 10px;
+            }
             &__feature-products {
                 &__item {
                     &-1,
                     &-2,
                     &-3 {
+                        text-align: center;
                         float: left;
-                        width: 33.3%;
+                        width: 32%;
                         position: relative;
                         &__content {
                             position: absolute;
@@ -32,6 +54,9 @@
                             top: 50%;
                             text-align: center;
                         }
+                    }
+                    &-2 {
+                        padding: 0 2%;
                     }
                 }
             }
