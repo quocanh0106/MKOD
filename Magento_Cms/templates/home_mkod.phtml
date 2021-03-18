@@ -5,4 +5,79 @@
 <div class="main-mkod">
     <?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('feature_products')->toHtml(); ?>
 </div>
-<p>asdasdsad</p>
+<div class="trend-mkod" id="test-slick">
+<?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('trending_now')->toHtml(); ?>
+</div>
+
+<div class="kol">
+
+</div>
+<script>
+    require([
+        'jquery',
+        'slick'
+    ], function ($) {
+        jQuery(document).ready(function () {
+            jQuery(".main-mkod__feature-products").slick({
+                dots: true,
+                infinite: true,
+                autoplay: true,
+                speed: 300,
+                autoplaySpeed: 200000,
+                arrows: true,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                
+                responsive: [
+                    {
+                        breakpoint: 992,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 1
+                        }
+                    },
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    },
+                ]
+            });
+            jQuery(".widget-product-grid").slick({
+                dots: true,
+                infinite: true,
+                autoplay: true,
+                speed: 300,
+                autoplaySpeed: 200000,
+                slidesToShow: 5,
+                slidesToScroll: 4,
+                
+                responsive: [
+                    {
+                        breakpoint: 1280,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 3
+                        }
+                    },
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 2
+                        }
+                    },
+                    {
+                        breakpoint: 600,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }
+                ]
+            });
+        });
+    });
+</script>
