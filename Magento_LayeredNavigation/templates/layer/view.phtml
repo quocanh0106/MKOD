@@ -49,29 +49,40 @@
             <?php if ($filter->getItemsCount()) : ?>
             <?php if (!$wrapOptions) : ?>
                 <strong role="heading" aria-level="2" class="block-subtitle filter-subtitle"><?= $block->escapeHtml(__('Shopping Options')) ?></strong>
-                <div class="filter-options" id="narrow-by-list" data-role="content" data-mage-init='
+                <div class="filter-options" id="filter-product" data-role="content" data-mage-init='
                         {
                             "accordion":
                             {
                                 "openedState": "active",
                                 "collapsible": true,
                                 "active": false,
-                                "multipleCollapsible": false
+                                "multipleCollapsible": true
                             }
                         }'>
-                    <?php $wrapOptions = true;
-                    endif; ?>
-                    <div data-role="collapsible" class="filter-options-item">
-                        <div data-role="title" class="filter-options-title">
-                            <button>aloalo</button>
+                    <div data-role="collapsible" >
+                        <div data-role="title">
+                            <button>filter</button>
                         </div>
-                        <div data-role="content" class="filter-options-content">
-                            <div data-role="title" class="filter-options-title"><?= $block->escapeHtml(__($filter->getName())) ?></div>
-                            <div data-role="content" class="filter-options-content"><?= /* @noEscape */ $block->getChildBlock('renderer')->render($filter) ?></div>
+                        <div data-role="content" id="narrow-by-list" data-mage-init='
+                        {
+                            "accordion":
+                            {
+                                "openedState": "active",
+                                "collapsible": true,
+                                "active": false,
+                                "multipleCollapsible": true
+                            }
+                        }'>
+                            <?php $wrapOptions = true;
+                            endif; ?>
+                            <div data-role="collapsible" class="filter-options-item">
+                                <div data-role="title" class="filter-options-title"><?= $block->escapeHtml(__($filter->getName())) ?></div>
+                                <div data-role="content" class="filter-options-content"><?= /* @noEscape */ $block->getChildBlock('renderer')->render($filter) ?></div>
+                            </div>
+                            <?php endif; ?>
+                            <?php endforeach; ?>
                         </div>
                     </div>
-                    <?php endif; ?>
-                    <?php endforeach; ?>
                     <?php if ($wrapOptions) : ?>
                 </div>
             <?php else : ?>
