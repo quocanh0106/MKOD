@@ -9,7 +9,7 @@
     <update handle="default_head_blocks"/>
     <body>
 
-        
+
         <referenceBlock name="breadcrumbs" remove="true" />
         <!-- <referenceBlock name="header.container" remove="true" />
         <referenceBlock name="main" remove="true" /> -->
@@ -27,7 +27,7 @@
             <container name="home_mkod" as="home_mkod" label="Home MKOD" htmlTag="div" htmlClass="home-mkod">
                 <block class="Magento\Framework\View\Element\Template" name="home-mkod" template="Magento_Theme::home_mkod.phtml"/>
             </container>
-            
+
         </referenceContainer> -->
 
         <!-- <container name="content.top" label="Main Content Top">

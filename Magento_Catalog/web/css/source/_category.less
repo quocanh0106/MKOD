@@ -15,8 +15,7 @@
             }
         }
         .list-banner{
-            .content-layout;
-            .lib-css(max-width, 1360px);
+            .content-layout(1360px);
             .lib-css(font-family, @font-family__fugue);
             .lib-css(font-size, 18px);
             .lib-css(color, @color-cate-desc);
@@ -31,14 +30,16 @@
 }
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
     .columns{
-        .content-layout;
-        .lib-css(max-width, 1318px);
         li.item.product.product-item{
             padding: 0;
-
         }
+    }
+    .products.wrapper.grid.products-grid{
+        .content-layout(1318px);
     }
     .page-products .product-item-info {
         width: 250px;
+
     }
+
 }
