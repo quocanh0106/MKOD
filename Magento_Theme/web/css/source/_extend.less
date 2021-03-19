@@ -13,8 +13,12 @@
                 // transform: translate(-75%, -12%);
             }
             .minicart-wrapper {
+                z-index: 500;
                 transform: translate(11px, 24px);
                 .action.showcart {
+                    .counter.qty{
+                        position: absolute;
+                    }
                     >p {
                         display: none;
                         font-size: 14px;
@@ -40,7 +44,7 @@
                         .search {
                             > .control {
                                 > input {
-                                    border: 0;
+                                    // border: 1px solid #333;
                                     font-size: 14px;
                                     letter-spacing: .75px;
                                     color: #858585;
@@ -67,6 +71,9 @@
     .page-footer {
         .footer.content {
             .block.newsletter {
+                border-bottom: 1px solid #333;
+                margin-bottom: 0;
+                padding-bottom: 12px;
                 .contact {
                     >a {
                         color: #656565;
@@ -91,6 +98,7 @@
             }
             .footer-container {
                 width: 100%;
+                padding-top: 10px;
                 .footer {
                     .copy,
                     .service,
@@ -99,11 +107,16 @@
                         width: 100%;
                         text-align: center;
                         h5 {
+                            letter-spacing: 0.25px;
                             font-size: 16px;
                             font-weight: 700;
                             color: #090909;
                             font-family: @font-family__fugue;
                             text-transform: uppercase;
+                        }
+                        address,p {
+                            text-transform: capitalize;
+                            letter-spacing: 1px;
                         }
                     }
                     .feature {
@@ -121,13 +134,6 @@
         }
     }
     /* ---------- End Footer ------------*/
-
-    /* ---------- Main ------------*/
-    .page-main {
-        // overflow: hidden;
-    }
-    /* ---------- End Main ------------*/
-
 }
 
 /*--------------------Reponsive screen max = 480px ------------*/
@@ -171,6 +177,13 @@
                 margin-top: 6.6%;
                 .block-content {
                     .minisearch {
+                        .search {
+                            > .control {
+                                > input {
+                                    border: 1px solid #333;
+                                }
+                            }
+                        }
                         .label {
                             position: relative;
                             right: 13.5%;
@@ -199,7 +212,11 @@
 
     /* ---------- Footer ------------*/
     .page-footer {
-        
+        .footer.content {
+            .block.newsletter {
+                text-align: center;
+            }
+        }
     }
     /* ---------- End Footer ------------*/
 }
@@ -229,10 +246,12 @@
                     text-align: center;
 
                     font-size: 16px;
-                    color: #242424;
                     font-family: @font-family__fugue;
                     text-transform: uppercase;
                     letter-spacing: .5px;
+                    a {
+                        color: #242424;
+                    }
                     p{
                         margin: 0;
                     }
@@ -241,6 +260,19 @@
         }
         .header.content {
             padding: 0 20px;
+            .block-search {
+                .block-content {
+                    .minisearch {
+                        .search {
+                            > .control {
+                                > input {
+                                    border: 1px solid #333;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
             .logo {
                 transform: translate(-57%, 14%);
             }
@@ -327,19 +359,35 @@
     }
     /* ---------- End NAV ------------*/
 
-     /* ---------- Footer ------------*/
-     .page-footer {
+    /* ---------- Footer ------------*/
+    .page-footer {
         background-color: #fff;
         .footer.content {
+            max-width: 1356px;
             .footer-container {
+                float: left;
                 width: 100%;
                 .footer {
                     .copy,
                     .service,
                     .feature {
-                        width: 33.3%;
+                        address,
+                        p {
+                            font-size: 16px;
+                            color: #090909;
+                            font-weight: 300;
+                            font-family: @font-family__fugue;
+                        }
+                    }
+                    .copy {
+                        width: 27.3%;
+                        text-align: left;
+                    }
+                    .service {
+                        width: 42.3%;
                     }
                     .feature {
+                        width: 30.3%;
                         &__col {
                             &__left,
                             &__right {
@@ -351,20 +399,28 @@
                 }
             }
             .block {
-                float: none;
+                float: left;
                 .contact {
                     width: 50%;
                     float: left;
-                    .facebook,
-                    .twitter,
-                    .instagram {
+                    .facebook {
                         i {
                             font-size: 27px;
                         }
                     }
+                    .twitter {
+                        i {
+                            font-size: 32px;
+                        }
+                    }
+                    .instagram {
+                        i {
+                            font-size: 34px;
+                        }
+                    }
                 }
                 .newsletter-child {
-                    width: 27.5%;
+                    width: 50%;
                     float: right;
                     .content {
                         .sign-up-button {
@@ -421,8 +477,19 @@
         .header.content {
             .block-search {
                 transform: translate(-227%, 60%);
+                .block-content {
+                    .minisearch {
+                        .search {
+                            > .control {
+                                > input {
+                                    border: 0px solid #333;
+                                }
+                            }
+                        }
+                    }
+                }
             }
-        }
+        }      
     }
 
      /* ---------- NAV ------------*/
@@ -448,4 +515,71 @@
         }
     }
     /* ---------- End NAV ------------*/
+
+    /* ---------- Footer ------------*/
+    .page-footer {
+        .footer.content {
+            .block {
+                .newsletter-child {
+                    width: 26%;
+                }
+            }
+            .contact {
+                width: 50%;
+                float: left;
+                .facebook {
+                    padding-right: 10px;
+                }
+                .twitter {
+                    padding-right: 10px;
+                }
+            }
+            .newsletter-child {
+                padding: 16px 11px 0 0;
+            }
+            .footer-container {
+                .footer {
+                    .copy,
+                    .service,
+                    .feature {
+                        width: 33.3%;
+                        p {
+                            text-align: left;
+                        }
+                    }
+                    .copy {
+                        h5 {
+                            padding-left: 10px;
+                        }
+                        address {
+                            padding: 23px 0 0 8px;
+                        }
+                    }
+                    .service {
+                        h5 {
+                            padding-right: 32px;
+                        }
+                        p {
+                            margin: -5px 0 0 58px;
+                        }
+                        p:last-child {
+                            padding-top: 13px;
+                        }
+                    }
+                    .feature {
+                        h5 {
+                            padding-left: 84px;
+                        }
+                        >div {
+                            padding: 0 0px 0 142px;
+                            p{
+                                margin: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    /* ---------- End Footer ------------*/
 }
