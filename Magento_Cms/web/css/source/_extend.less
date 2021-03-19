@@ -180,6 +180,22 @@
     }
 }
 
+/*--------------------Reponsive screen max = 480 ------------*/
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__xs) {
+    .home-mkod {
+        .banner-main {
+            &__content {
+                > h3{
+                    font-size: 26px;
+                }
+                p {
+                    transform: translate(-1.5%, -4%);
+                }
+            }
+        }
+    }
+}
+
 /*--------------------Reponsive screen min = 768px ------------*/
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
     .home-mkod {
