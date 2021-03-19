@@ -56,9 +56,13 @@
                 <width>75</width>
                 <height>75</height>
             </image>
-            <image id="new_products_content_widget_grid" type="small_image">
+            <!-- <image id="new_products_content_widget_grid" type="small_image">
                 <width>240</width>
                 <height>300</height>
+            </image> -->
+            <image id="new_products_content_widget_grid" type="small_image">
+                <width>250</width>
+                <height>375</height>
             </image>
             <image id="new_products_content_widget_list" type="small_image">
                 <width>270</width>
