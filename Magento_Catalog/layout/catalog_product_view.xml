@@ -12,7 +12,15 @@
     <update handle="catalog_product_opengraph" />
     <update handle="page_calendar"/>
     <body>
-        <referenceContainer name="skip_gallery_before.wrapper" remove="true"/>
+        <referenceContainer name="skip_gallery_after.wrapper" display="false"/>
+        <referenceBlock name="skip_gallery_after" remove="true"/>
+        <referenceBlock name="skip_gallery_before" remove="true"/>
+        <referenceBlock name="product.info.review" remove="true"/>
+        <move element="product.info.details" destination="product.info.main" after="product.info"/>
+        <move element="product.info.stock.sku" destination="product.info.price" before="-"/>
+        <move element="product.price.final" destination="product.info.price" after="product.info.stock.sku"/>
+        <move element="product.info.type" destination="product.info.price" after="-"/>
+
         <attribute name="itemtype" value="http://schema.org/Product" />
         <attribute name="itemscope" value="itemscope"/>
         <referenceBlock name="head.components">
@@ -31,37 +39,10 @@
             </arguments>
         </referenceBlock>
 
-        <referenceBlock name="breadcrumbs" template="Magento_Catalog::product/breadcrumbs.phtml">
-            <arguments>
-                <argument name="viewModel" xsi:type="object">Magento\Catalog\ViewModel\Product\Breadcrumbs</argument>
-            </arguments>
-        </referenceBlock>
-
+        <!--content-->
         <referenceContainer name="content">
             <container name="product-detail" htmlTag="div" htmlClass="product-detail" before="-">
-                <container name="product.info.main" htmlTag="div" htmlClass="product-info-main" before="-">
-                    <container name="product.info.price" label="Product info auxiliary container" htmlTag="div" htmlClass="product-info-price">
-                        <container name="product.info.stock.sku" label="Product auxiliary info" htmlTag="div" htmlClass="product-info-stock-sku">
-                            <container name="product.info.type" before="-"/>
-                            <block class="Magento\Catalog\Block\Product\View\Description" name="product.info.sku" template="Magento_Catalog::product/view/attribute.phtml" after="product.info.type">
-                                <arguments>
-                                    <argument name="at_call" xsi:type="string">getSku</argument>
-                                    <argument name="at_code" xsi:type="string">sku</argument>
-                                    <argument name="css_class" xsi:type="string">sku</argument>
-                                    <argument name="at_label" xsi:type="string">default</argument>
-                                    <argument name="add_attribute" xsi:type="string">itemprop="sku"</argument>
-                                </arguments>
-                            </block>
-                        </container>
-                        <block class="Magento\Catalog\Block\Product\View" name="product.info.review" template="Magento_Catalog::product/view/review.phtml" after="product.info.stock.sku" />
-                        <block class="Magento\Catalog\Pricing\Render" name="product.price.final">
-                            <arguments>
-                                <argument name="price_render" xsi:type="string">product.price.render.default</argument>
-                                <argument name="price_type_code" xsi:type="string">final_price</argument>
-                                <argument name="zone" xsi:type="string">item_view</argument>
-                            </arguments>
-                        </block>
-                    </container>
+                <container name="product.info.main" htmlTag="div" htmlClass="product-info-main" after="product.info.media">
                     <block class="Magento\Catalog\Pricing\Render" name="product.price.tier" after="product.info.price">
                         <arguments>
                             <argument name="price_render" xsi:type="string">product.price.render.default</argument>
@@ -90,6 +71,7 @@
                             </block>
                         </block>
                     </block>
+
                     <container name="product.info.extrahint" as="extrahint" label="Product View Extra Hint">
                         <container name="product.info.social" label="Product social links container" htmlTag="div" htmlClass="product-social-links">
                             <block class="Magento\Catalog\Block\Product\View" name="product.info.addto" as="addto" template="Magento_Catalog::product/view/addto.phtml">
@@ -114,37 +96,11 @@
                         </arguments>
                     </block>
                 </container>
-                <container name="product.info.media" htmlTag="div" htmlClass="product media" after="product.info.main">
-                    <block class="Magento\Framework\View\Element\Template" name="skip_gallery_after.target" before="skip_gallery_before.wrapper" template="Magento_Theme::html/skiptarget.phtml">
-                        <arguments>
-                            <argument name="target_id" xsi:type="string">gallery-prev-area</argument>
-                        </arguments>
-                    </block>
-                    <container name="skip_gallery_before.wrapper" htmlTag="div" htmlClass="action-skip-wrapper">
-                        <block class="Magento\Framework\View\Element\Template" before="product.info.media.image" name="skip_gallery_before" template="Magento_Theme::html/skip.phtml">
-                            <arguments>
-                                <argument name="target" xsi:type="string">gallery-next-area</argument>
-                                <argument name="label" translate="true" xsi:type="string">Skip to the end of the images gallery</argument>
-                            </arguments>
-                        </block>
-                    </container>
+                <container name="product.info.media" htmlTag="div" htmlClass="product media" before="-" after="product.info.main">
                     <block class="Magento\Catalog\Block\Product\View\Gallery" name="product.info.media.image" template="Magento_Catalog::product/view/gallery.phtml">
                         <arguments>
                             <argument name="gallery_options" xsi:type="object">Magento\Catalog\Block\Product\View\GalleryOptions</argument>
                             <argument name="imageHelper" xsi:type="object">Magento\Catalog\Helper\Image</argument>
-                        </arguments>
-                    </block>
-                    <container name="skip_gallery_after.wrapper" htmlTag="div" htmlClass="action-skip-wrapper">
-                        <block class="Magento\Framework\View\Element\Template" after="product.info.media.image" name="skip_gallery_after" template="Magento_Theme::html/skip.phtml">
-                            <arguments>
-                                <argument name="target" xsi:type="string">gallery-prev-area</argument>
-                                <argument name="label" translate="true" xsi:type="string">Skip to the beginning of the images gallery</argument>
-                            </arguments>
-                        </block>
-                    </container>
-                    <block class="Magento\Framework\View\Element\Template" name="skip_gallery_before.target" after="skip_gallery_after.wrapper" template="Magento_Theme::html/skiptarget.phtml">
-                        <arguments>
-                            <argument name="target_id" xsi:type="string">gallery-next-area</argument>
                         </arguments>
                     </block>
                 </container>
@@ -173,8 +129,16 @@
                         </argument>
                     </arguments>
                 </block>
+
+
+
+            </container>
+            <container name="product-slide" htmlTag="div" htmlClass="product-slide" after="product-detail">
+                <block class="Magento\Framework\View\Element\Template" name="product-slide-detail" before="-" template="Magento_Catalog::product/slide.phtml"/>
             </container>
         </referenceContainer>
+
+
         <referenceContainer name="content.aside">
             <block class="Magento\Catalog\Block\Product\ProductList\Related" name="catalog.product.related" template="Magento_Catalog::product/list/items.phtml">
                 <arguments>
