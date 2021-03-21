@@ -114,3 +114,53 @@ if ($exist = ($block->getProductCollection() && $block->getProductCollection()->
         </div>
     </div>
 <?php endif;?>
+
+<script>
+    require([
+        'jquery',
+        'slick'
+    ], function ($) {
+        jQuery(document).ready(function () {
+            jQuery(".widget-new-grid").slick({
+                dots: true,
+                infinite: true,
+                autoplay: true,
+                speed: 300,
+                autoplaySpeed: 200000,
+                slidesToShow: 5,
+                slidesToScroll: 1,
+                
+                responsive: [
+                    {
+                        breakpoint: 1440,
+                        settings: {
+                            slidesToShow: 4,
+                            slidesToScroll: 1
+                        }
+                    },
+                    {
+                        breakpoint: 1074,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 1
+                        }
+                    },
+                    {
+                        breakpoint: 992,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 1
+                        }
+                    },
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    },
+                ]
+            });
+        });
+    });
+</script>

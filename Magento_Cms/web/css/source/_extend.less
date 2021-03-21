@@ -74,7 +74,14 @@
             .clearfix;
         }
         .trend-mkod {
-            .content-layout (1400px);
+            .content-layout (1390px);
+            > h3 {
+                text-align: center;
+                text-transform: uppercase;
+                color: #212121;
+                font-weight: 400;
+                font-family: @font-family-name__opensans;
+            }
         }
     }
 }
@@ -138,27 +145,6 @@
 /*--------------------Reponsive screen max = 640 ------------*/
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__s) {
     .home-mkod {
-        // .banner-main {
-        //     overflow: hidden;
-        //     p:first-child {
-        //         img {
-        //             transform: scale(1.14);
-        //         }
-        //     }
-        //     &__content {
-        //         top: 48%;
-        //         >h3 {
-        //             line-height: 45px;
-        //             font-size: 47px;
-        //             letter-spacing: .5px;
-        //             margin-top: 4px;
-        //         }
-        //         >p {
-        //             position: relative;
-        //             transform: translate(-1.5%, 67%);
-        //         }
-        //     }
-        // }
         .main-mkod {
             h3 {
                 margin-left: 0;
@@ -244,6 +230,12 @@
                         text-align: right;
                     }
                 }
+            }
+        }
+        .trend-mkod {
+            >h3 {
+                font-size: 36px;
+                padding: 36px 0 42px 7px;
             }
         }
     }
