@@ -1,8 +1,66 @@
 & when (@media-common = true){
     .product-detail{
+        .product-info-main .product-info-price{
+            display: unset;
+        }
+        .product-info-main .product-info-price .price-box{
+            display: unset;
+            width: 100%;
+        }
+        .product-info-main .stock.available, .product-info-main .stock.unavailable{
+            text-transform: unset;
+        }
         .product-info-main{
             .page-title-wrapper{
                 background-color:#fff;
+                .base{
+                    .lib-css(font-size, 24px);
+                    .lib-css(color, #0d0d0d);
+                    .lib-css(font-weight, bold);
+                    .lib-css(font-family,@font-family__gt-fectra-fine);
+                }
+            }
+
+            .product-info-price .price-box .price-container .price{
+                .lib-css(font-size, 18px);
+                .lib-css(color, #676767);
+
+            }
+            .product-info-price{
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                text-align: center;
+                .lib-css(border, none);
+                .lib-css(font-family, @font-family__opensans);
+                .lib-css(font-size, 12px);
+                .lib-css(color, #8f8f8f);
+                .lib-css(font-weight,600);
+                .product-info-stock-sku{
+                    display: unset;
+                    padding:0 0 0 0;
+                    text-align: center;
+                    strong.type{
+                        display: none;
+
+                    }
+                }
+                .price-box .price-final_price{
+                    display: unset;
+                    width: 100%;
+
+                    span.price-label{
+                        display: none;
+
+                    }
+                }
+                .stock .available{
+                    text-transform: unset;
+                    span:first-child{
+                        border-right: 1px solid;
+                        padding:0 0 0 0;
+                    }
+                }
             }
         }
     }
@@ -18,6 +76,9 @@
                 background-color:#fff;
             }
         }
+    }
+    .product-slide{
+        .content-layout(1400px);
     }
 
 }
