@@ -126,13 +126,6 @@
                         }
                         &__content {
                             transform: translate(-49%, -46%);
-                            p:first-child {
-                            }
-                            p:last-child {
-                                >a {
-                                    
-                                }
-                            }
                         }
                     }
                 }
@@ -198,9 +191,6 @@
             }
         }
         .main-mkod {
-            h3 {
-
-            }
             &__feature-products {
                 &__item {
                     &-1,
@@ -213,14 +203,6 @@
                         }
                         &__content {
                             transform: translate(-50%, -50%);
-                            p:first-child {
-                                
-                            }
-                            p:last-child {
-                                >a {
-                                    
-                                }
-                            }
                         }
                     }
                     &-1 {
@@ -245,9 +227,6 @@
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__xl) {
     .home-mkod {
         .main-mkod {
-            h3 {
-
-            }
             &__feature-products {
                 &__item {
                     &-1,
@@ -258,24 +237,23 @@
                             width: 100%;
                             padding: 0;
                         }
-                        &__content {
-                            p:first-child {
-                                
-                            }
-                            p:last-child {
-                                >a {
-                                    
-                                }
-                            }
-                        }
                     }
                     &-1 {
+                        &__content {
+                            padding: 11px 27px 0px 0;
+                        }
                         padding-right: 40px;
                     }
                     &-2 {
+                        &__content {
+                            padding: 29px 0 0 7px;
+                        }
                         padding: 0 20px;
                     }
                     &-3 {
+                        &__content {
+                            padding: 30px 0 0 37px;
+                        }
                         padding-left: 40px;
                     }
                 }
