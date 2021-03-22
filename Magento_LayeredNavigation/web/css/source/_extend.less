@@ -4,6 +4,33 @@
         max-width: 281px;
         width: 100%;
         left: 0;
+        border: unset;
+        text-transform: lowercase;
+        font-weight: 400;
+        .lib-css(font-size, 12px);
+        .lib-css(letter-spacing, 1px);
+        .lib-css(color, #0d0d0d);
+        .lib-css(font-family, @font-family__fugue);
+        span.filter-span::after{
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            font-size: 7px;
+            line-height: inherit;
+            color: inherit;
+            content: '\e61c';
+            margin: -5px 0 0 1px;
+            font-family: 'luma-icons';
+            vertical-align: middle;
+            display: inline-block;
+            font-weight: normal;
+            overflow: hidden;
+            speak: none;
+            text-align: center;
+        }
+
+    }
+    .products.wrapper ~ .toolbar .limiter{
+        display: none;
     }
     .toolbar.toolbar-products{
         position: relative;
@@ -17,35 +44,131 @@
         }
         .toolbar-sorter .sorter{
             position: absolute;
-            left: 0;
-
+            left: 12.5%;
+            top: 42px;
+            right: unset;
         }
     }
 
+
 }
+//mobile screen: 0 up to 767
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+    .desktop{
+        display: none;
+    }
+    .page-products .product-item-info{
+        width: 100%;
+        text-align: center;
+    }
 
-
+}
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__s) {
+    .page-products.page-layout-1column .products-grid .product-item{
+        width: 50%;
+    }
+}
 //desktop screen: 768 up to infinity
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
     .mobile{
         display: none;
     }
+    .page-layout-1column .filter.block{
+        border: unset;
+    }
+    .filter.block{
+        top: 5px;
+        left: 10.1%;
+    }
     .filter-options-item{
         width: 100%;
         margin: 0;
+        .filter-options-title{
+            .lib-css(font-size, 12px);
+            .lib-css(letter-spacing, 1px);
+            .lib-css(color, #0d0d0d);
+            .lib-css(font-family, @font-family__fugue);
+            text-transform: lowercase;
+            font-weight: 400;
+        }
+        .filter-options-title:after{
+            content: '\e61c';
+            font-size: 7px;
+            right: 21px;
+            top: 3px;
+
+        }
     }
     .page-products .sorter{
         position: absolute;
         left: 0;
         right: unset;
     }
-}
-
-
-//mobile screen: 0 up to 767
-.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
-    .desktop{
-        display: none;
+    .toolbar.toolbar-products .toolbar-sorter.sorter{
+        left: 15.5%;
+        top: 15px;
+        right: unset;
+    }
+    .toolbar.toolbar-products .modes{
+        right: 8.4%;
+        top: 5px;
+    }
+    .modes-mode{
+        background-color:unset;
+        box-shadow: unset;
+    }
+    .modes-mode:last-child{
+        background-color:unset;
+        box-shadow: unset;
+        border: unset;
+        padding: 7px 20px 0 10px;
+    }
+    .modes-mode.active{
+        background-color:unset;
+        box-shadow: unset;
+    }
+    .modes-label + .modes-mode{
+        border: unset;
+        padding: 7px 0;
+    }
+    .page-products.page-layout-1column .products-grid .product-item{
+        width: 33.333%;
     }
 
 }
+
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l) {
+    .page-products.page-layout-1column .products-grid .product-item{
+        width: 33.333%;
+    }
+}
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__lxs) {
+    .page-products.page-layout-1column .products-grid .product-item{
+        width: 25%;
+    }
+}
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__ls) {
+    .page-products.page-layout-1column .products-grid .product-item{
+        width: 20%;
+    }
+    .page-products .product-item-info{
+        width: 250px;
+    }
+}
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__xm) {
+    .filter.block{
+        top: 33px;
+        left: 10.1%;
+    }
+    .toolbar.toolbar-products .toolbar-sorter.sorter{
+        left: 12.5%;
+        top: 42px;
+        right: unset;
+    }
+    .toolbar.toolbar-products .modes{
+        right: 8.4%;
+        top: 33px;
+    }
+}
+
