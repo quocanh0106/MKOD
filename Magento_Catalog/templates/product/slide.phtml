@@ -1,7 +1,8 @@
-
-    <?php echo
-    $block->getLayout()
-        ->createBlock('Magento\Cms\Block\Block')
-        ->setBlockId('product_slide')
-        ->toHtml(); ?>
-
+<div class="related-mkod">
+    <h3>related products</h3>
+    <?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('detail_list_product')->toHtml(); ?>
+</div>
+<div class="others-mkod">
+    <h3>others also bought</h3>
+    <?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('detail_list_product')->toHtml(); ?>
+</div>

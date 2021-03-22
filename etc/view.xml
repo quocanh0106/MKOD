@@ -63,6 +63,9 @@
             <image id="new_products_content_widget_grid" type="small_image">
                 <width>250</width>
                 <height>375</height>
+                <transparency>false</transparency>
+                <aspect_ratio>false</aspect_ratio>
+                <frame>false</frame>
             </image>
             <image id="new_products_content_widget_list" type="small_image">
                 <width>270</width>
@@ -82,8 +85,11 @@
             </image>
             <image id="product_page_image_large" type="image"/>
             <image id="product_page_image_medium" type="image">
-                <width>700</width>
-                <height>700</height>
+                <width>575</width>
+                <height>850</height>
+                <transparency>false</transparency>
+                <aspect_ratio>false</aspect_ratio>
+                <frame>false</frame>
             </image>
             <image id="product_page_image_small" type="thumbnail">
                 <width>88</width>
