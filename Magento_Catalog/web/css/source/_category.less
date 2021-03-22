@@ -39,45 +39,84 @@
             .lib-css(color, #212121);
 
         }
+        .product-item-name{
+            margin: 12px 0 -3px 0;
+            word-spacing: -2px;
+            a{
+                letter-spacing: 0.49px;
+            }
+        }
+        .price-box{
+            margin: 3px 0 6px 0;
+        }
+        .price{
+            font-size: 18px;
+            font-weight: 400;
+
+        }
         .price-label{
             display: none;
         }
 
+
     }
     .product-item-info{
         .view-buy{
+            .lib-css(font-size, 12px);
             .lib-css(font-family, @font-family__opensans);
             .lib-css(color, #212121);
-            .lib-css(font-weight, #400);
+            .lib-css(font-weight, 400);
             display: flex;
             justify-content: center;
             .view{
+                border-right: 1px solid;
+                padding: 0 12px 0 0;
 
             }
-            .buy{
-
+            button.buy{
+                padding: 0 0 0 12px;
+                .lib-css(color, #ff97cd);
+                .lib-css(font-weight, 400);
+                border: unset;
+                background:unset;
             }
         }
     }
-    .product-item-info:hover{
-        .view-buy{
-            display: none;
-        }
-    }
+
+}
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l) {
+
 }
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
     .columns{
         li.item.product.product-item{
-            padding: 0;
+            padding: 0 0 26px 0;
         }
     }
     .products.wrapper.grid.products-grid{
-        .content-layout(1318px);
+        .content-layout(1408px);
     }
     .page-products .product-item-info {
         width: 250px;
 
     }
+    ol.products.list.items.product-items{
+        margin: -2px 0 0 30px;
+    }
 
-
+    .toolbar.toolbar-products{
+        position: absolute;
+        top: 0;
+        max-width: unset;
+        right: unset;
+        .modes{
+            right: 11%;
+            top: 45px;
+        }
+        .toolbar-sorter.sorter{
+            left: 11%;
+            top: 45px;
+            right: unset;
+        }
+    }
 }
