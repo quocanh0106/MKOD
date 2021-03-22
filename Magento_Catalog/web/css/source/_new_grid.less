@@ -1,5 +1,8 @@
 & when (@media-common = true){
     .block.widget.block-new-products {
+        .slick-initialized .slick-slide {
+            margin-left: -5.25px;
+        }
         .product-items {
             .product-item {
                 margin-left: 0;
@@ -12,7 +15,11 @@
                         padding-top: 7px;
                         text-align: center;
                         .product-item-name {
-                            margin-top: 5px;
+                            margin-top: 4px;
+                            padding-right: 4px;
+                            >p {
+                                margin-top: -2px;
+                            }
                         }
                         .product-item-name,
                         .price {
@@ -113,9 +120,11 @@
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__xl) {
     .block.widget.block-new-products {
         margin-left: 15px;
-        .slick-prev,
+        .slick-prev {
+            left: -25px;
+        }
         .slick-next {
-            right: -20px;
+            right: -25px;
         }
     }
 }
