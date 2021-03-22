@@ -74,7 +74,14 @@
             .clearfix;
         }
         .trend-mkod {
-            .content-layout (1400px);
+            .content-layout (1390px);
+            > h3 {
+                text-align: center;
+                text-transform: uppercase;
+                color: #212121;
+                font-weight: 400;
+                font-family: @font-family-name__opensans;
+            }
         }
     }
 }
@@ -119,13 +126,6 @@
                         }
                         &__content {
                             transform: translate(-49%, -46%);
-                            p:first-child {
-                            }
-                            p:last-child {
-                                >a {
-                                    
-                                }
-                            }
                         }
                     }
                 }
@@ -138,27 +138,6 @@
 /*--------------------Reponsive screen max = 640 ------------*/
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__s) {
     .home-mkod {
-        // .banner-main {
-        //     overflow: hidden;
-        //     p:first-child {
-        //         img {
-        //             transform: scale(1.14);
-        //         }
-        //     }
-        //     &__content {
-        //         top: 48%;
-        //         >h3 {
-        //             line-height: 45px;
-        //             font-size: 47px;
-        //             letter-spacing: .5px;
-        //             margin-top: 4px;
-        //         }
-        //         >p {
-        //             position: relative;
-        //             transform: translate(-1.5%, 67%);
-        //         }
-        //     }
-        // }
         .main-mkod {
             h3 {
                 margin-left: 0;
@@ -212,9 +191,6 @@
             }
         }
         .main-mkod {
-            h3 {
-
-            }
             &__feature-products {
                 &__item {
                     &-1,
@@ -227,14 +203,6 @@
                         }
                         &__content {
                             transform: translate(-50%, -50%);
-                            p:first-child {
-                                
-                            }
-                            p:last-child {
-                                >a {
-                                    
-                                }
-                            }
                         }
                     }
                     &-1 {
@@ -246,6 +214,12 @@
                 }
             }
         }
+        .trend-mkod {
+            >h3 {
+                font-size: 36px;
+                padding: 36px 0 42px 7px;
+            }
+        }
     }
 }
 
@@ -253,9 +227,6 @@
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__xl) {
     .home-mkod {
         .main-mkod {
-            h3 {
-
-            }
             &__feature-products {
                 &__item {
                     &-1,
@@ -266,24 +237,23 @@
                             width: 100%;
                             padding: 0;
                         }
-                        &__content {
-                            p:first-child {
-                                
-                            }
-                            p:last-child {
-                                >a {
-                                    
-                                }
-                            }
-                        }
                     }
                     &-1 {
+                        &__content {
+                            padding: 11px 27px 0px 0;
+                        }
                         padding-right: 40px;
                     }
                     &-2 {
+                        &__content {
+                            padding: 29px 0 0 7px;
+                        }
                         padding: 0 20px;
                     }
                     &-3 {
+                        &__content {
+                            padding: 30px 0 0 37px;
+                        }
                         padding-left: 40px;
                     }
                 }
