@@ -12,6 +12,7 @@
     <update handle="catalog_product_opengraph" />
     <update handle="page_calendar"/>
     <body>
+        <referenceBlock name="breadcrumbs" display="true" />
         <referenceContainer name="skip_gallery_after.wrapper" display="false"/>
         <referenceBlock name="skip_gallery_after" remove="true"/>
         <referenceBlock name="skip_gallery_before" remove="true"/>
