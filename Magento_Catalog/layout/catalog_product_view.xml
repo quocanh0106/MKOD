@@ -16,11 +16,13 @@
         <referenceBlock name="skip_gallery_after" remove="true"/>
         <referenceBlock name="skip_gallery_before" remove="true"/>
         <referenceBlock name="product.info.review" remove="true"/>
+        <referenceBlock name="catalog.product.related" remove="true"/>
         <move element="product.info.details" destination="product.info.main" after="product.info"/>
         <move element="product.info.stock.sku" destination="product.info.price" before="-"/>
         <move element="product.price.final" destination="product.info.price" after="product.info.stock.sku"/>
         <move element="product.info.type" destination="product.info.price" after="-"/>
-
+        <move element="catalog.product.related" destination="main.content" after="-"/>
+        
         <attribute name="itemtype" value="http://schema.org/Product" />
         <attribute name="itemscope" value="itemscope"/>
         <referenceBlock name="head.components">
