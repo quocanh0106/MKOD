@@ -113,14 +113,7 @@
                     font-weight: 400;
                     font-family: @font-family__opensans;
                 }
-                .title-ar.allow:before {
-                    content: 'alo';
-                    
-                }
-                .title-ar.allow.active:before {
-                    content: 'alo1yyy';
-                    
-                }
+
             }
         }
     }
@@ -206,6 +199,21 @@
                     }
                 }
 
+            }
+            .product.info.detailed{
+                margin: -4px 0 0 36px;
+                .title-ar{
+                    border-bottom: 1px solid;
+                    letter-spacing: 1.2px;
+                }
+                .title-ar h4::after {
+                    content: '\e622';
+                    font-family: 'luma-icons';
+                }
+                .title-ar.active h4::after {
+                    content: '\e621';
+                    font-family: 'luma-icons';
+                }
             }
         }
         .product.media{
