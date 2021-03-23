@@ -10,7 +10,7 @@
     <body>
 
 
-        <referenceBlock name="breadcrumbs" remove="true" />
+        <referenceBlock name="breadcrumbs" display="false" />
         <!-- <referenceBlock name="header.container" remove="true" />
         <referenceBlock name="main" remove="true" /> -->
         <move element="authorization-link-login" destination="header-wrapper" after="minicart"/>
