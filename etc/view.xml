@@ -86,14 +86,14 @@
             <image id="product_page_image_large" type="image"/>
             <image id="product_page_image_medium" type="image">
                 <width>575</width>
-                <height>850</height>
+                <height>865</height>
                 <transparency>false</transparency>
                 <aspect_ratio>false</aspect_ratio>
                 <frame>false</frame>
             </image>
             <image id="product_page_image_small" type="thumbnail">
-                <width>88</width>
-                <height>110</height>
+                <width>175</width>
+                <height>265</height>
             </image>
             <image id="product_swatch_image_large" type="image"/>
             <image id="product_swatch_image_medium" type="image">
