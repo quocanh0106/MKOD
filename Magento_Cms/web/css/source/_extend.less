@@ -68,6 +68,35 @@
                             }
                         }
                     }
+                    &-1 {
+                        &__content {
+                            p:first-child {
+                                line-height: 40px;
+                                margin-top: -5px;
+                            }
+                            p:last-child {
+                                >a {
+                                    position: relative;
+                                    top: 11px;
+                                    left: -10px;
+                                }
+                            }
+                        }
+                    }
+                    &-3 {
+                        &__content {
+                            p:first-child {
+                                position: relative;
+                                left: 3px;
+                            }
+                            p:last-child {
+                                >a {
+                                    position: relative;
+                                    top: 14px;
+                                }
+                            }
+                        }
+                    }
                 }
                 .clearfix;
             }
@@ -89,6 +118,9 @@
 /*--------------------Reponsive screen max = 768px ------------*/
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
     .home-mkod {
+        // .product-item-info {
+        //     width: 400px;
+        // }
         .banner-main {
             overflow: hidden;
             p:first-child {
@@ -131,6 +163,80 @@
                 }
 
             }
+        }
+        .trend-mkod {
+            >h3 {
+                padding: 45px 5px 38px 0px;
+                font-size: 36px;
+            }
+            .block.widget.block-new-products {
+                .product-image-container {
+                    padding: 0 0 0 20px;
+                    width: 71% @im;
+                    .product-image-wrapper {
+                        .product-image-photo {
+                            width: 100%;
+                            height: auto;
+                        }
+                    }
+                }
+                .product-items {
+                    .product-item {
+                        .product-item-info {
+                            .product-item-details{
+                                .product-item-name {
+                                    font-size: 30px;
+                                    letter-spacing: -1.3px;
+                                    padding: 6px 0px 0 3px;
+                                    p {
+                                        position: relative;
+                                        top: -6px;
+                                    }
+                                }
+                                .price {
+                                    font-size: 31px;
+                                    padding: 0 0 0 22px;
+                                    top: -6px;
+                                    position: relative;
+                                }
+                                .price-label {
+
+                                }
+                                .product-item-actions {
+                                    .actions-view {
+                                        a {
+                                            font-size: 23px;
+                                            position: relative;
+                                            top: -1px;
+                                            letter-spacing: -1px;
+                                            left: 13px;
+                                        }
+                                    }
+                                    .none {
+                                        position: relative;
+                                        top: 6px;
+                                        letter-spacing: -1px;
+                                        left: 4px;
+                                    }
+                                    .actions-primary {
+                                        position: relative;
+                                        top: 4px;
+                                        left: -5px;
+                                        button {
+                                            span {
+                                                font-size: 22px;
+                                            }
+                                        }
+                                    }
+                                }
+                                .price-box {
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
         }
     }
 }
