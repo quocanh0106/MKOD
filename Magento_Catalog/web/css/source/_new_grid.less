@@ -9,7 +9,7 @@
                 .product-item-info {
                     text-align: center;
                     .product-item-photo {
-                        
+
                     }
                     .product-item-details{
                         padding-top: 7px;
@@ -19,6 +19,9 @@
                             padding-right: 4px;
                             >p {
                                 margin-top: -2px;
+                            }
+                            a.product-item-link{
+                                text-transform: capitalize;
                             }
                         }
                         .product-item-name,
@@ -90,7 +93,7 @@
             right: 0;
         }
     }
-    
+
 }
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
     .page-footer {
@@ -114,7 +117,7 @@
             right: 0;
         }
     }
-    
+
 }
 
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__xl) {

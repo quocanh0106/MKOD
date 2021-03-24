@@ -1,7 +1,5 @@
 <div class="related-mkod">
-    <h3>related products</h3>
-    <?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('detail_list_product')->toHtml(); ?>
-    
+    <?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('product_slide')->toHtml(); ?>
 </div>
 <script>
     require([
@@ -17,7 +15,7 @@
                 autoplaySpeed: 20000000,
                 slidesToShow: 5,
                 slidesToScroll: 1,
-                
+
                 responsive: [
                     {
                         breakpoint: 1440,
