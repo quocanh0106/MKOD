@@ -23,7 +23,7 @@
         <move element="product.price.final" destination="product.info.price" after="product.info.stock.sku"/>
         <move element="product.info.type" destination="product.info.price" after="-"/>
         <move element="catalog.product.related" destination="main.content" after="-"/>
-        
+
         <attribute name="itemtype" value="http://schema.org/Product" />
         <attribute name="itemscope" value="itemscope"/>
         <referenceBlock name="head.components">
@@ -100,6 +100,8 @@
                     </block>
                 </container>
                 <container name="product.info.media" htmlTag="div" htmlClass="product media" before="-" after="product.info.main">
+                    <block name="pd-top" template="Magento_Catalog::product/product-top.phtml" before="-"/>
+
                     <block class="Magento\Catalog\Block\Product\View\Gallery" name="product.info.media.image" template="Magento_Catalog::product/view/gallery.phtml">
                         <arguments>
                             <argument name="gallery_options" xsi:type="object">Magento\Catalog\Block\Product\View\GalleryOptions</argument>
@@ -135,9 +137,6 @@
 
 
 
-            </container>
-            <container name="product-slide" htmlTag="div" htmlClass="product-slide" after="product-detail">
-                <block class="Magento\Framework\View\Element\Template" name="product-slide-detail" before="-" template="Magento_Catalog::product/slide.phtml"/>
             </container>
         </referenceContainer>
 
