@@ -1,17 +1,3 @@
-<div class="banner-main">
-    <?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('banner')->toHtml(); ?>
-</div>
-
-<div class="main-mkod">
-    <?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('feature_products')->toHtml(); ?>
-</div>
-<div class="trend-mkod" id="test-slick">
-<?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('trending_now')->toHtml(); ?>
-</div>
-
-<div class="kol">
-
-</div>
 <script>
     require([
         'jquery',
@@ -19,7 +5,7 @@
     ], function ($) {
         jQuery(document).ready(function () {
             jQuery(".main-mkod__feature-products").slick({
-                dots: true,
+                dots: false,
                 infinite: true,
                 autoplay: true,
                 speed: 300,
@@ -46,11 +32,11 @@
                 ]
             });
             jQuery(".widget-new-grid").slick({
-                dots: true,
+                dots: false,
                 infinite: true,
                 autoplay: true,
                 speed: 300,
-                autoplaySpeed: 2000,
+                autoplaySpeed: 200000,
                 slidesToShow: 5,
                 slidesToScroll: 1,
                 

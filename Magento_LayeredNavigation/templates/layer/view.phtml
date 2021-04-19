@@ -107,19 +107,19 @@
 <div class="mobile">
     <?php if ($block->canShowBlock()) : ?>
         <div class="block filter" id="layered-filter-block" data-mage-init='
-    {
-        "collapsible":
         {
-            "openedState": "active",
-            "collapsible": true,
-            "active": false,
-            "collateral":
+            "collapsible":
             {
-                "openedState": "filter-active",
-                "element": "body"
+                "openedState": "active",
+                "collapsible": true,
+                "active": false,
+                "collateral":
+                {
+                    "openedState": "filter-active",
+                    "element": "body"
+                }
             }
-        }
-    }'>
+        }'>
             <?php $filtered = count($block->getLayer()->getState()->getFilters()) ?>
             <div class="block-title filter-title" data-count="<?= /* @noEscape */ $filtered ?>">
                 <strong data-role="title"><?= $block->escapeHtml(__('Shop By')); ?></strong>

@@ -1,0 +1,120 @@
+@font-face {
+    font-family: 'Fugue';
+    src: url('Fugue-Regular.eot');
+    src: url('Fugue-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Fugue-Regular.woff2') format('woff2'),
+        url('Fugue-Regular.ttf') format('truetype'),
+        url('Fugue-Regular.svg#Fugue-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'la-brands-400';
+    src: url('la-brands-400.eot');
+    src: url('la-brands-400.eot?#iefix') format('embedded-opentype'),
+        url('la-brands-400.woff2') format('woff2'),
+        url('la-brands-400.ttf') format('truetype'),
+        url('la-brands-400.svg#la-brands-400') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'la-regular-400';
+    src: url('la-regular-400.eot');
+    src: url('la-regular-400.eot?#iefix') format('embedded-opentype'),
+        url('la-regular-400.woff2') format('woff2'),
+        url('la-regular-400.ttf') format('truetype'),
+        url('la-regular-400.svg#la-regular-400') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fugue';
+    src: url('Fugue-Regular_1.eot');
+    src: url('Fugue-Regular_1.eot?#iefix') format('embedded-opentype'),
+        url('Fugue-Regular_1.woff2') format('woff2'),
+        url('Fugue-Regular_1.ttf') format('truetype'),
+        url('Fugue-Regular_1.svg#Fugue-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GT Sectra Fine Trial';
+    src: url('GTSectraFineTrial-Bold.eot');
+    src: url('GTSectraFineTrial-Bold.eot?#iefix') format('embedded-opentype'),
+        url('GTSectraFineTrial-Bold.woff2') format('woff2'),
+        url('GTSectraFineTrial-Bold.ttf') format('truetype'),
+        url('GTSectraFineTrial-Bold.svg#GTSectraFineTrial-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('OpenSans-Bold.eot');
+    src: url('OpenSans-Bold.eot?#iefix') format('embedded-opentype'),
+        url('OpenSans-Bold.woff2') format('woff2'),
+        url('OpenSans-Bold.ttf') format('truetype'),
+        url('OpenSans-Bold.svg#OpenSans-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'la-solid-900';
+    src: url('la-solid-900.eot');
+    src: url('la-solid-900.eot?#iefix') format('embedded-opentype'),
+        url('la-solid-900.woff2') format('woff2'),
+        url('la-solid-900.ttf') format('truetype'),
+        url('la-solid-900.svg#la-solid-900') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('OpenSans-Light.eot');
+    src: url('OpenSans-Light.eot?#iefix') format('embedded-opentype'),
+        url('OpenSans-Light.woff2') format('woff2'),
+        url('OpenSans-Light.ttf') format('truetype'),
+        url('OpenSans-Light.svg#OpenSans-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('OpenSans-SemiBold.eot');
+    src: url('OpenSans-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('OpenSans-SemiBold.woff2') format('woff2'),
+        url('OpenSans-SemiBold.ttf') format('truetype'),
+        url('OpenSans-SemiBold.svg#OpenSans-SemiBold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('OpenSans-Regular.eot');
+    src: url('OpenSans-Regular.eot?#iefix') format('embedded-opentype'),
+        url('OpenSans-Regular.woff2') format('woff2'),
+        url('OpenSans-Regular.ttf') format('truetype'),
+        url('OpenSans-Regular.svg#OpenSans-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
