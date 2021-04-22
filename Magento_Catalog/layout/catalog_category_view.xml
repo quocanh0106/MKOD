@@ -49,7 +49,7 @@
                 <argument name="id" xsi:type="string">page-title-heading</argument>
                 <argument name="add_base_attribute_aria" xsi:type="string">page-title-heading toolbar-amount</argument>
             </arguments>
-            <block class="" name="category-infor" after="page-title-heading" template="Magento_Catalog::banner.phtml"/>
+            <block class="Magento\Framework\View\Element\Template" name="category-infor" after="page-title-heading" template="Magento_Catalog::banner.phtml"/>
             <block class="Magento\Catalog\Block\Category\Rss\Link" name="rss.link" template="Magento_Catalog::category/rss.phtml"/>
         </referenceBlock>
     </body>
