@@ -64,8 +64,6 @@
                 <width>250</width>
                 <height>375</height>
                 <transparency>false</transparency>
-                <aspect_ratio>false</aspect_ratio>
-                <frame>false</frame>
             </image>
             <image id="new_products_content_widget_list" type="small_image">
                 <width>270</width>
@@ -88,8 +86,6 @@
                 <width>575</width>
                 <height>865</height>
                 <transparency>false</transparency>
-                <aspect_ratio>false</aspect_ratio>
-                <frame>false</frame>
             </image>
             <image id="product_page_image_small" type="thumbnail">
                 <width>175</width>

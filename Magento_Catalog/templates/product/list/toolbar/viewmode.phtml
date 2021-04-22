@@ -1,0 +1,25 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+?>
+<?php
+/**
+ * Product list toolbar
+ *
+ * @var $block \Magento\Catalog\Block\Product\ProductList\Toolbar
+ */
+?>
+    <div class="modes">
+        <?php $_modes = $block->getModes(); ?>
+        <?php if ($_modes && count($_modes) > 1) :?>
+            <?php foreach ($block->getModes() as $_code => $_label) :?>
+                <strong title="<?= $block->escapeHtmlAttr($_label) ?>"
+                        class="modes-mode active mode-<?= $block->escapeHtmlAttr(strtolower($_code)) ?>"
+                        data-value="<?= $block->escapeHtmlAttr(strtolower($_code)) ?>">
+                    <span><?= $block->escapeHtml($_label) ?></span>
+                </strong>
+            <?php endforeach; ?>
+        <?php endif; ?>
+    </div>
