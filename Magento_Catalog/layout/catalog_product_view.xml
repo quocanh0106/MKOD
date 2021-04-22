@@ -101,8 +101,6 @@
                     </block>
                 </container>
                 <container name="product.info.media" htmlTag="div" htmlClass="product media" before="-" after="product.info.main">
-
-
                     <block class="Magento\Catalog\Block\Product\View\Gallery" name="product.info.media.image" template="Magento_Catalog::product/view/gallery.phtml">
                         <arguments>
                             <argument name="gallery_options" xsi:type="object">Magento\Catalog\Block\Product\View\GalleryOptions</argument>
@@ -148,12 +146,8 @@
                         </argument>
                     </arguments>
                 </block>
-
-
-
             </container>
         </referenceContainer>
-
 
         <referenceContainer name="content.aside">
             <block class="Magento\Catalog\Block\Product\ProductList\Related" name="catalog.product.related" template="Magento_Catalog::product/list/items.phtml">

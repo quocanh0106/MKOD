@@ -8,8 +8,7 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <referenceBlock name="page.main.title" display="false"/>
-        <referenceBlock name="main" display="false"/>
-        <referenceBlock name="product.info.review" display="false"/>
+        <!-- <referenceBlock name="main" display="false"/> -->
 
         <referenceContainer name="main.content">
             <container name="home_mkod" as="home_mkod" label="Home MKOD" htmlTag="div" htmlClass="home-mkod">
